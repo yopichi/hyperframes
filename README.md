@@ -1,29 +1,45 @@
-<div id="stage" data-composition-id="launch" data-start="0" data-width="1920" data-height="1080">
-  <video
-    class="clip"
-    data-start="0"
-    data-duration="6"
-    data-track-index="0"
-    src="intro.mp4"
-    muted
-    playsinline
-  ></video>
+<!doctype html>
+<html lang="en">
 
-  <h1 id="title" class="clip" data-start="1" data-duration="4" data-track-index="1">Launch day</h1>
+<head>
+  <title>ArtCraft</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-  <audio
-    data-start="0"
-    data-duration="6"
-    data-track-index="2"
-    data-volume="0.5"
-    src="music.wav"
-  ></audio>
-
-  <script src="https://cdn.jsdelivr.net/npm/gsap@3/dist/gsap.min.js"></script>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-Y4Y8KMLPQ7"></script>
   <script>
-    const tl = gsap.timeline({ paused: true });
-    tl.from("#title", { opacity: 0, y: 40, duration: 0.8 }, 1);
-    window.__timelines = window.__timelines || {};
-    window.__timelines.launch = tl;
+    window.dataLayer = window.dataLayer || [];
+    function gtag() {dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-Y4Y8KMLPQ7');
   </script>
-</div>
+
+  <!---->
+  <!-- <script crossOrigin="anonymous" src="//unpkg.com/react-scan/dist/auto.global.js"></script> -->
+
+  <!-- Microsoft Clarity -->
+  <script type="text/javascript">
+    (function (c, l, a, r, i, t, y) {
+      c[a] = c[a] || function () {(c[a].q = c[a].q || []).push(arguments)};
+      t = l.createElement(r); t.async = 1; t.src = "https://www.clarity.ms/tag/" + i;
+      y = l.getElementsByTagName(r)[0]; y.parentNode.insertBefore(t, y);
+    })(window, document, "clarity", "script", "sixp9uu263");
+  </script>
+
+  <base href="/" />
+  <link rel="icon" type="image/svg+xml" href="/artcraft-icon.svg" />
+  <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,100..900&family=Instrument+Serif:ital@0;1&family=Geist+Mono:wght@300..800&display=swap"
+    rel="stylesheet" />
+  <!-- <link rel="stylesheet" href="/src/styles.css" /> -->
+</head>
+
+<body className="overflow-hidden bg-ui-background">
+  <div id="root"></div>
+  <script type="module" src="/src/index.tsx"></script>
+</body>
+
+</html>
